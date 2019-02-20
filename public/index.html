@@ -7,7 +7,9 @@
 <body>
 	<div id="app">
 		<div>
-			<p v-for="item in genMix" >{{item.fuel}} {{item.perc}}</p>
+			<p>Time from: {{timeFrom}}</p>
+			<p>Time to: {{timeTo}}</p>
+			<p v-for="gen in genMix" >{{gen.fuel}} {{gen.perc}}</p>
 		</div>
 
 	</div>

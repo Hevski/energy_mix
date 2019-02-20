@@ -18,7 +18,11 @@ document.addEventListener("DOMContentLoaded", () => {
       getEnergy: function () {
 				fetch('https://api.carbonintensity.org.uk/generation')
 				.then(response => response.json())
-				.then(result => this.genMix = result.data.generationmix)
+				.then(result => {
+					this.genMix = result.data.generationmix;
+					this.timeFrom = result.data.from;
+					this.timeTo = result.data.to;
+				})
 			}
 		},
 		mounted: function() {
