@@ -11,13 +11,12 @@
 			<p>Time to: {{timeTo}}</p>
 			<p v-for="gen in genMix" >{{gen.fuel}} {{gen.perc}}%</p>
 		</div>
-		<!-- <GChart
+		<GChart
+		v-if="chartData"
 		type="ColumnChart"
-		:data="generationMix"
-		v-if="generationMix"
-		/> -->
-
+		:data="chartData"
+		:options="chartOptions"
+		/>
 	</div>
-
 </body>
 </html>
