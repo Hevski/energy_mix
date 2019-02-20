@@ -9,8 +9,13 @@
 		<div>
 			<p>Time from: {{timeFrom}}</p>
 			<p>Time to: {{timeTo}}</p>
-			<p v-for="gen in genMix" >{{gen.fuel}} {{gen.perc}}</p>
+			<p v-for="gen in genMix" >{{gen.fuel}} {{gen.perc}}%</p>
 		</div>
+		<!-- <GChart
+		type="ColumnChart"
+		:data="generationMix"
+		v-if="generationMix"
+		/> -->
 
 	</div>
 
